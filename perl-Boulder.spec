@@ -42,6 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_sitelib}/Boulder
 %{perl_sitelib}/Boulder/[^L]*
 # Labbase.pm is incomplete and unusable in version 1.27
-#%{perl_sitelib}/Boulder/L*
+#%%{perl_sitelib}/Boulder/L*
 %{perl_sitelib}/Boulder.pod
 %{_mandir}/man3/*
