@@ -42,5 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %{perl_sitelib}/Stone.pm
+%{perl_sitelib}/Stone
 %{perl_sitelib}/Boulder
 %{_mandir}/man3/*
