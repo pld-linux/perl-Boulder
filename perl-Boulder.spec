@@ -1,10 +1,11 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Boulder perl module
-Summary(pl):	Modu³ perla Boulder
+Summary:	Boulder - an API for hierarchical tag/value structures
+Summary(pl):	Boulder - API dla hierarchicznych struktur znacznik/warto¶æ
 Name:		perl-Boulder
 Version:	1.30
 Release:	2
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Boulder/Boulder-%{version}.tar.gz
 # Source0-md5:	87b37e890c959d4ab567614263d64953
@@ -14,10 +15,16 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Boulder - Read and write tag/value data from an input stream.
+Boulder provides a simple stream-oriented format for transmitting data
+objects between one or more processes.  It does not provide for the
+serialization of Perl objects the way FreezeThaw or Data::Dumper do,
+but it does provide the advantage of being language independent.
 
 %description -l pl
-Modu³ perla Boulder.
+Boulder udostêpnia prosty strumieniowy format do transmisji danych
+obiektowych pomiêdzy jednym lub wieloma procesami. Nie zapewnia on
+serializacji obiektów Perla w taki sposób, jak czyni± to FreezeThaw
+lub Data::Dumper, lecz jego zalet± jest niezale¿no¶æ od jêzyka.
 
 %prep
 %setup -q -n Boulder-%{version}
