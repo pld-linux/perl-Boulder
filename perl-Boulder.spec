@@ -7,7 +7,7 @@ Summary:	Boulder - an API for hierarchical tag/value structures
 Summary(pl):	Boulder - API dla hierarchicznych struktur znacznik/warto¶æ
 Name:		perl-Boulder
 Version:	1.30
-Release:	3
+Release:	4
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -61,5 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Boulder/[^L]*
 # Labbase.pm is incomplete and unusable in version 1.27
 #%%{perl_vendorlib}/Boulder/L*
-%{perl_vendorlib}/Boulder.pod
 %{_mandir}/man3/*
