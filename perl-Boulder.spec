@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	Boulder - an API for hierarchical tag/value structures
 Summary(pl):	Boulder - API dla hierarchicznych struktur znacznik/warto¶æ
@@ -11,6 +15,9 @@ Source0:	http://www.cpan.org/modules/by-module/Boulder/Boulder-%{version}.tar.gz
 # Source0-md5:	87b37e890c959d4ab567614263d64953
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-DB_File
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,12 +39,15 @@ lub Data::Dumper, lecz jego zalet± jest niezale¿no¶æ od jêzyka.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
