@@ -2,8 +2,8 @@
 Summary:	Boulder perl module
 Summary(pl):	Modu³ perla Boulder
 Name:		perl-Boulder
-Version:	1.27
-Release:	2
+Version:	1.29
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Boulder/Boulder-%{version}.tar.gz
