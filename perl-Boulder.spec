@@ -23,7 +23,7 @@ Modu³ perla Boulder.
 %setup -q -n Boulder-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
