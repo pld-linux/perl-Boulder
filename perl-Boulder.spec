@@ -3,7 +3,7 @@ Summary:	Boulder perl module
 Summary(pl):	Modu³ perla Boulder
 Name:		perl-Boulder
 Version:	1.27
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Boulder/Boulder-%{version}.tar.gz
@@ -39,6 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_sitelib}/Stone.pm
 %{perl_sitelib}/Stone
-%{perl_sitelib}/Boulder
+%dir %{perl_sitelib}/Boulder
+%{perl_sitelib}/Boulder/[^L]*
+# Labbase.pm is incomplete and unusable in version 1.27
+#%{perl_sitelib}/Boulder/L*
 %{perl_sitelib}/Boulder.pod
 %{_mandir}/man3/*
