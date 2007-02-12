@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Boulder - an API for hierarchical tag/value structures
-Summary(pl):	Boulder - API dla hierarchicznych struktur znacznik/warto¶æ
+Summary(pl.UTF-8):   Boulder - API dla hierarchicznych struktur znacznik/wartoÅ›Ä‡
 Name:		perl-Boulder
 Version:	1.30
 Release:	5
@@ -27,11 +27,11 @@ objects between one or more processes.  It does not provide for the
 serialization of Perl objects the way FreezeThaw or Data::Dumper do,
 but it does provide the advantage of being language independent.
 
-%description -l pl
-Boulder udostêpnia prosty strumieniowy format do transmisji danych
-obiektowych pomiêdzy jednym lub wieloma procesami. Nie zapewnia on
-serializacji obiektów Perla w taki sposób, jak czyni± to FreezeThaw
-lub Data::Dumper, lecz jego zalet± jest niezale¿no¶æ od jêzyka.
+%description -l pl.UTF-8
+Boulder udostÄ™pnia prosty strumieniowy format do transmisji danych
+obiektowych pomiÄ™dzy jednym lub wieloma procesami. Nie zapewnia on
+serializacji obiektÃ³w Perla w taki sposÃ³b, jak czyniÄ… to FreezeThaw
+lub Data::Dumper, lecz jego zaletÄ… jest niezaleÅ¼noÅ›Ä‡ od jÄ™zyka.
 
 %prep
 %setup -q -n Boulder-%{version}
