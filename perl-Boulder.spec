@@ -3,7 +3,6 @@
 %bcond_without	tests	# do not perform "make test"
 
 %define		pdir	Boulder
-%include	/usr/lib/rpm/macros.perl
 Summary:	Boulder - an API for hierarchical tag/value structures
 Summary(pl.UTF-8):	Boulder - API dla hierarchicznych struktur znacznik/wartość
 Name:		perl-Boulder
